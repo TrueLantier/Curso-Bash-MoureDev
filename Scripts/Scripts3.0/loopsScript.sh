@@ -11,6 +11,7 @@ for i in 1 2 3 4
 do
     touch $i.txt
 done    
+echo
 
 for i in *txt
 do
@@ -23,9 +24,20 @@ do
     echo "Su contenido es: " 
     cat $nombre
 done    
+echo
 
+#while
 count=1
 while [ $count -le 5 ] 
+do
+    echo "Contador: $count"
+    ((count++))
+done    
+echo
+
+#until --> Hasta que la condición sea verdadera.
+count=1
+until [ $count -gt 10 ] 
 do
     echo "Contador: $count"
     ((count++))
